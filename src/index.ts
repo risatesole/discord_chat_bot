@@ -1,11 +1,10 @@
 import express from "express";
+import helloRoute from "./routes/helloRoute.js";
 
 const app = express();
 const PORT = 3000;
 
-app.get("/hello", (req, res) => {
-  res.json({ message: "Hello from Express!" });
-});
+app.use("/hello", helloRoute);
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
