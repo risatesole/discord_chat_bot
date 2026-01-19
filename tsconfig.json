@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    /* **Key Module Settings for ES Imports** */
+    // 1. Module: Specifies the module code generation. 'NodeNext' is the most modern option for Node.js.
+    // This allows using 'import ... from "package"' without needing an extension.
+    "module": "NodeNext",
+
+    // 2. Module Resolution: How TypeScript figures out what an import path refers to.
+    // 'NodeNext' tells TypeScript to follow Node.js's ES Module resolution logic.
+    "moduleResolution": "NodeNext",
+
+    /* **Target and Output Settings** */
+    // 3. Target: Specifies the JavaScript language version for the compiled output.
+    "target": "ES2022",
+
+    // Root directory for source files
+    "rootDir": "./src",
+
+    // Output directory for compiled JavaScript
+    "outDir": "./dist",
+
+    /* **Recommended Best Practices** */
+    // Ensures all imported modules have a default export you can assign.
+    "esModuleInterop": true,
+
+    // Enables source mapping for debugging.
+    "sourceMap": true,
+
+    // Strict type checking. Always recommended.
+    "strict": true,
+
+    // Skip type checking of declaration files.
+    "skipLibCheck": true,
+
+    // Ensures file names use consistent casing.
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"]
+}
