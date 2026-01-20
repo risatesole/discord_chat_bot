@@ -1,10 +1,10 @@
 import { Router } from "express";
-import helloRoute from "./Hello/HelloRoute.js"; 
+import Greeting from "./Greeting/GreetingRoute.js"; 
 import discordRoute from "./Discord/DiscordRoute.js"
 
 const router = Router();
 
-router.use("/hello", helloRoute);
+router.use("/greeting", Greeting);
 router.use("/discord",discordRoute);
 
 export default router;
